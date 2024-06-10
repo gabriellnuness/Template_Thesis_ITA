@@ -200,20 +200,21 @@
 
 %% Biblatex update NBR 10520 from 2023
 \RequirePackage[
-    style=abnt,
+    style=biblatex-abnt/abnt,
     repeatfields, % removes dashed in repeated ref
     extrayear, % 2012a  in bibliography as well
-    bibstyle=abnt,
-    citestyle=abnt,
+    bibstyle=biblatex-abnt/abnt,
+    citestyle=biblatex-abnt/abnt,
     maxcitenames=4,
     maxbibnames=99,
     giveninits=true,%abbreviate first name
     sortcites=true,
     doi=true,
+    uniquename=mininit, % to distinguish same author
+    uniquelist=minyear, % to distinguish same author and same year
+    backref=true,
     % natbib=true,
     % citetracker=true,
-    % uniquename=mininit,
-    % uniquelist=minyear,
     ]{biblatex}
 
 % make citation "Nunes" instead of "NUNES"
