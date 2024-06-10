@@ -414,7 +414,7 @@
 			\end{spacing}
 	 \else
 			\begin{spacing}{1.5}
-			S\~{a}o Jos\'{e} dos Campos, \@publmonth\ de \@publyear
+			S\~{a}o Jos\'{e} dos Campos, \@publday de \@publmonth\ de \@publyear
 			\end{spacing}
 	 \fi
 
