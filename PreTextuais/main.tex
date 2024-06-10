@@ -40,12 +40,18 @@ Aos amigos da Graduação e Pós-Graduação do ITA por motivarem tanto a criaç
 \listoftables %opcional
 
 % Lista de abreviaturas
-\listofabbreviations
-\input{PreTextuais/listaabreviaturas} %opcional
-
+\printnoidxglossary[type=\acronymtype,
+    title=\listofabbreviationsname,
+    toctitle=\listofabbreviationsname,
+    sort=standard,
+    nonumberlist]
+    
 % Lista de simbolos
-\listofsymbols
-\input{PreTextuais/listasimbolos} %opcional
+\printnoidxglossary[
+    title=\listofsymbolsname,
+    toctitle=\listofsymbolsname,
+    sort=standard,
+    nonumberlist]
 
 % Sumario
 \tableofcontents

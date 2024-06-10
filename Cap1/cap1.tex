@@ -3,20 +3,21 @@ O objetivo deste projeto de mestrado é desenvolver técnicas de controle subót
 experimental em um manipulador de três graus de liberdade \cite{Nascimento1970}.
 
 O teste \cite{Patagonios2001} e validação das técnicas de controle propostas foram realizados em um ambiente de simulação e no manipulador
-experimental, adquirido através do projeto FAPESP $N^{\circ}$ 98/00649-5, que se encontra em funcionamento no Laboratório de Sistemas Inteligentes (LASI) do Departamento de Engenharia Elétrica da USP em São Carlos. De acordo com \citeauthor{Furmento1995}, pode-se listar:
+experimental, adquirido através do projeto FAPESP $N^{\circ}$ 98/00649-5, que se encontra em funcionamento no \gls{lasi} do Departamento de Engenharia Elétrica da USP em São Carlos. De acordo com \citeauthor{Furmento1995}, pode-se listar:
 \begin{itemize}
 \item Isso;
 \item Aquilo; e
 \item Aquele outro.
 \end{itemize}
 
+Então, no \gls{lasi} são realizadas as várias atividades listadas.
+
 \section{Motivação}
 Manipuladores mecânicos \cite{Sbornian2002} vêm sendo utilizados há várias décadas para a automação de tarefas
 repetitivas em ambientes industriais, ambientes estes de fácil acesso tanto em termos físicos quanto em termos de baixo
 risco à saúde humana. Nos últimos anos, verifica-se uma utilização cada vez maior de manipuladores em
 ambientes de difícil acesso ou inóspitos, como no interior de usinas nucleares, no fundo dos oceanos e no
-espaço. A localização dos manipuladores nesta nova gama de aplicações faz com que sua manutenção,
-Dpós uma falha mecânica ou elétrica, seja custosa e demorada, portanto estes mecanismos requerem sofisticadas
+espaço. A localização dos manipuladores nesta nova gama de aplicações faz com que sua manutenção,após uma falha mecânica ou elétrica, seja custosa e demorada, portanto estes mecanismos requerem sofisticadas
 metodologias de controle tolerante a falhas \cite{ITALUS2004}.
 
 Após a ocorrência de uma falha em um de seus atuadores, o manipulador torna-se um sistema subatuado. Um sistema também pode se tornar subatuado quando é projetado  dessa maneira, ou quando o operador deliberadamente mantém um ou mais atuadores disponíveis inoperantes durante uma tarefa. Reduzindo o número de atuadores sem reduzir o número de graus de
@@ -31,7 +32,7 @@ liberdade e ajustando-se o sistema de controle adequado, pode-se obter um mecani
 
 Controle do manipulador após uma falha é fundamental do ponto de vista de operação, principalmente nos casos descritos acima, em que a localização do manipulador impede sua manutenção de forma fácil. Recentemente tem havido a combinação
 de algorítmos de detecção e isolação de falhas com os de controle pós-falha em um método unificado. Uma extensão desse trabalho, que vê o problema de controle tolerante a falhas através de uma perspectiva integrada, foi proposta por
-{marcel4}. Os autores apresentam um ambiente híbrido consistindo de três unidades básicas que garantem a compleição de tarefas na presença de qualquer número de juntas falhas (Figura \ref{cupim}). A primeira unidade é um esquema de detecção
+{marcel4}. Os autores apresentam um ambiente híbrido consistindo de três unidades básicas que garantem a compleição de tarefas na presença de qualquer número de juntas falhas (Fig.~\ref{cupim}). A primeira unidade é um esquema de detecção
 e isolação de falhas que continuamente monitora o manipulador para detectar e identificar possíveis falhas nas juntas. A segunda unidade é responsável pela reconfiguração do controle. A terceira unidade é composta de algorítmos de
 controle apropriados para cada tipo de configuração do robô, baseado na informação da unidade de reconfiguração \cite{COFFEE2000}.
 
@@ -70,5 +71,17 @@ Os procedimentos da metodologia e os resultados obtidos para algumas configuraç
 No capítulo 7 são apresentadas as conclusões do trabalho.
 
 Quatro apêndices fazem parte do trabalho. O apêndice A apresenta alguns tópicos de álgebra linear que são a base do método proposto. No apêndice B são mostradas as equações da matriz de inércia e do vetor de torques não-inerciais
-utilizados na modelagem dinâmica do manipulador. No apêndice C temos as expressões literais dessas equações feitas no software MAPLE e no apêndice D alguns programas feitos no software MATLAB utilizados no projeto \cite{Furmento1995}\cite{Morgado2003}.
+utilizados na modelagem dinâmica do manipulador. No apêndice C temos as expressões literais dessas equações feitas no software MAPLE e no apêndice D alguns programas feitos no software MATLAB utilizados no projeto \cite{Furmento1995, Morgado2003}.
+
+
+\subsection{Como utilizar o glossário}
+O glossário no \LaTeX é automatico, utilizando o pacote ``glossaries'', então basta adicionar as entradas em ``listaabreviaturas.tex'' e em ``listasimbolos.tex'' e utilizar o comando ``$\backslash$gls\{\}''.
+A lista de abreviaturas e de simbolos será gerada automaticamente de acordo com os elementos que foram utilizados no texto.
+
+A primeira vez que uma abreviatura é chamada é automaticamente representada em sua forma completa: \gls{ctq}.
+Ao utilizar o comando depois da primeira vez, apenas a abreviatura será utilizada: \gls{ctq}.
+
+O glossário também pode ser utilizado para simbolos matemáticos, então pode-se definir por exemplo uma variável delta de Kronecker e utilizar o comando ``$\backslash$gls\{\}'', \gls{delta_kro}. 
+Se houver a necessidade de modificar o simbolo utilizado, não precisa alterar todas as entradas ao longo da tese, basta alterar o simbolo em ``listadesimbolos.tex''.
+
 

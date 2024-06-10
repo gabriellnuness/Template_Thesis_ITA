@@ -1,5 +1,5 @@
 \section{Modelagem no espaço das juntas}
-Manipuladores subatuados diferem dos totalmente atuados pois são equipados com um número de atuadores que é sempre menor que o número de graus de liberdade (GDL). Portanto, nem todos os GDL podem ser controlados ativamente ao mesmo tempo \cite{Sbornian2004}. Por exemplo, com um manipulador planar de 3 juntas equipado com dois atuadores, ou seja, duas juntas ativas e
+Manipuladores subatuados diferem dos totalmente atuados pois são equipados com um número de atuadores que é sempre menor que o número de \gls{graus_liberdade}. Portanto, nem todos os \gls{graus_liberdade} podem ser controlados ativamente ao mesmo tempo \cite{Sbornian2004}. Por exemplo, com um manipulador planar de 3 juntas equipado com dois atuadores, ou seja, duas juntas ativas e
 uma passiva, pode-se controlar ao mesmo tempo duas das juntas a qualquer instante, mas não todas. Para controlar todas as juntas de um manipulador subatuado, deve-se usar um controle sequencial. Este princípio foi provado pela primeira vez por {arai} usando  argumentos dinâmicos linearizados \cite{Joea2003}, e é a base para a modelagem no espaço das juntas e no espaço Cartesiano. A Tabela \ref{minhatab} apresenta os resultados \cite{Assenmacher1993,Silberschatz1991,Caromel1998}.
 
 \begin{table}
@@ -12,9 +12,9 @@ uma passiva, pode-se controlar ao mesmo tempo duas das juntas a qualquer instant
   \hline
 	Parâmetro & Unidade & Valor da simulação & Valor experimental   \\
 	\hline
-  Comprimento, $\alpha$ & $m$ &  $8,23$  & $8,54$ \\
-  Altura, $\beta$ & $m$     &  $29,1$ & $28,3$\\
-	Velocidade, $v$ & $m/s$  &  $60,2$ & $67,3$\\
+  Comprimento, \gls{comprimento} & $m$ &  $8,23$  & $8,54$ \\
+  Altura, \gls{altura} & $m$     &  $29,1$ & $28,3$\\
+	Velocidade, \gls{velocidade} & $m/s$  &  $60,2$ & $67,3$\\
 	\hline
 \end{tabular}
 \end{table}
@@ -30,7 +30,7 @@ Devido ao fato de que no máximo $n_{a}$ coordenadas generalizadas (ângulos das
 Considerando um robô manipulador rígido, malha aberta, e de $n$-juntas em série. Seja $q$ a representação de seu vetor de posição angular das juntas  e $\tau$ a representação de seu vetor de torque. A equação dinâmica pelo método de
 Lagrange é dada por:
 \begin{equation} \label{eq:lagr1}
-\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}})-\frac{\partial L}{\partial q}=\tau^{T}.
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) -\frac{\partial L}{\partial q}=\tau^{T}.
 \end{equation}
 O Lagrangiano $L$ é definido como a diferença entre as energias cinética e potencial do sistema:
 \begin{equation} \label{L}
