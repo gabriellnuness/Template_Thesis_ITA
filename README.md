@@ -22,3 +22,16 @@ agradecimentos, resumo, abstract, listaabreviaturas, listasimbolos
 4. As referências no arquivo Referencias/referencias.bib
 
 5. Caso tenha, atualizar os anexos e apêndices nas pastas AneA, ApeA...
+
+## texlive
+
+It is recommended to use Texlive instead of Miktex because it already comes with Perl to run the Makefile with latexmk (`tlmgr install latexmk`).
+
+Install texliveonfly to auto install required packages: `tlmgr install texliveonfly`. 
+
+Then, inside texliveonfly.py change "tlmgr" to "tlmgr.bat" if on windows.
+Run the first time with texliveonfly to install all packages: `texliveonfly --compiler=pdflatex tese.tex`
+
+## References
+The `biblatex-abnt` is not updated in CTAN yet, so it does not obey nbr6023:2018 neither nbr10520:2023.
+To get access to the most recent version, clone the `dev` branch from [biblatex-abnt](https://github.com/abntex/biblatex-abnt) and place it in your local texlive folder, e.g., `C:\texlive\2023\texmf-dist\tex\latex\biblatex-abnt`.
